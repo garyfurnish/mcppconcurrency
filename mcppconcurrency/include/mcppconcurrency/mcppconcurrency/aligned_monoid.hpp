@@ -4,9 +4,16 @@
 #include <utility>
 namespace mcppconcurrency
 {
+  /**
+   * \brief This is a wrapper that aligns a monoid.
+   *
+   * @tparam Monoid_Type Type of wrapped monoid.
+   * @tparam Alignment Alignment of wrapped monoid.
+   * @tparam Padding_Alignment Alignment of padding (on end).
+   **/
   template <typename Monoid_Type,
             size_t Alignment = mcpputil::cs_default_alignment,
-            size_t Padding_Alignment = mcpputil::cs_default_cache_line_size>
+            size_t Padding_Alignment = mcpputil::cs_default_alignment>
   class alignas(Alignment) aligned_monoid_t
   {
   public:
