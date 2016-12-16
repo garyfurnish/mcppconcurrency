@@ -142,8 +142,9 @@ namespace mcppconcurrency
   template <typename Monoid_Type, typename Allocator>
   void monoid_accumulator_t<Monoid_Type, Allocator>::accumulate(id_type id, const monoid_type &monoid)
   {
-    if (id >= ::gsl::narrow_cast<ptrdiff_t>(m_thread_monoids.size()))
+    if (id >= ::gsl::narrow_cast<ptrdiff_t>(m_thread_monoids.size())) {
       throw ::std::runtime_error("Monoid accumulator id out of bounds. 161115cd-3604-457c-800f-d172c8776f62");
+    }
     accumulate_unsafe(id, monoid);
   }
   template <typename Monoid_Type, typename Allocator>
