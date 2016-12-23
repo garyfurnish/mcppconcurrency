@@ -4,7 +4,9 @@
 #include <mcpputil/mcpputil/literals.hpp>
 using namespace bandit;
 using namespace ::mcpputil::literals;
+void internal_conditional_variable_test();
 go_bandit([]() {
+  internal_conditional_variable_test();
   describe("monoid_accumulator_t", []() {
     it("3fd12db5-14b6-42cb-87a7-7ad5b66cf2a7", []() {
       mcppconcurrency::monoid_accumulator_t<ptrdiff_t> accumulator;
