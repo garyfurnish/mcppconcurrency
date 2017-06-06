@@ -2,7 +2,8 @@
 #include <mcppconcurrency/mcppconcurrency/monoid_accumulator.hpp>
 #include <mcpputil/mcpputil/bandit.hpp>
 #include <mcpputil/mcpputil/literals.hpp>
-using namespace bandit;
+using namespace ::bandit;
+using namespace ::snowhouse;
 using namespace ::mcpputil::literals;
 void internal_conditional_variable_test();
 go_bandit([]() {
