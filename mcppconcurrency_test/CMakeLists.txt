@@ -6,5 +6,6 @@ add_compile_options(-fPIE)
 ENDIF(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 add_executable(mcppconcurrency_test
   main.cpp
+  internal_conditional_variable.cpp
   )
 target_link_libraries(mcppconcurrency_test mcppconcurrency mcpputil pthread)
